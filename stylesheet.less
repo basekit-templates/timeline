@@ -1,0 +1,39 @@
+// --------------------------------------
+// BaseKit Standard Template: Timeline
+// --------------------------------------
+
+// -----------------------------
+// Includes
+// -----------------------------
+
+@import "@{templateCommon}/bk-less-framework.less"; // BaseKit LESS Framework
+
+
+@import "@{templateLocal}/less/mixins.less"; // Mixins
+
+
+@import "@{templateLocal}/less/theme.less"; // Template
+
+
+@import "@{templateLocal}/less/widgets.less"; // Widgets
+
+@import "@{templateLocal}/less/messages.less"; // Messages
+
+// Plugin Includes
+@import "@{templateLocal}/less/plugins/plugin-blog.less"; // Plugin: Blog
+@import "@{templateLocal}/less/plugins/plugin-menu.less"; // Plugin: Menu
+@import "@{templateLocal}/less/plugins/plugin-ecommerce.less"; // Plugin: Ecommerce
+
+
+@import "@{templateLocal}/less/editor.less"; // Editor support styles
+
+
+@sidebar-position: 'left';
+
+body when (@sidebar-position = 'left'){
+   background-color: red !important;
+}
+
+body when (@sidebar-position = 'right'){
+    background-color: blue !important;
+}

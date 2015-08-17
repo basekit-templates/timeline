@@ -1,0 +1,667 @@
+// ------------------------------
+// Timeline Template: CSS > Theme
+// ------------------------------
+
+// 1. #Global Breakpoints
+// 2. #Color Swatches
+// 3. #Floating Footer Fix
+// 4. #Header
+// 5. #Footer
+// 6. #Main Zone
+// 7. #Typography
+
+
+
+
+// ------------------------------
+// 1. #Global Breakpoints
+// ------------------------------
+
+
+
+@bp-global-large: 	~"only screen and (min-width : 1000px)";
+@bp-global-medium: 	~"only screen and (min-width : 700px) and (max-width : 1000px)";
+@bp-global-small: 	~"only screen and (max-width : 700px)";
+
+// When specific styles for responsive columns styles are applied
+@bp-global-columns:   ~"only screen and (min-width : 478px)";
+
+
+
+
+// ------------------------------
+// x. Lightbox overlay fix
+// ------------------------------
+
+.lightboxOverlay {
+    z-index: 10000;
+}
+
+
+
+
+
+// ------------------------------
+// x. #Template Layout
+// ------------------------------
+
+
+body {
+    position: relative;
+}
+
+
+.basket--open,
+.search--open,
+.navigation--open {
+    height: 100%;
+    max-height: 100vh;
+    overflow: hidden;
+}
+
+
+
+
+.template-content {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+
+
+    @media @bp-global-large {
+        padding: 54px 20px;
+    }
+
+    @media @bp-global-small, @bp-global-medium {
+        padding: 40px 10px;
+    }
+}
+
+
+
+
+
+
+
+// ------------------------------
+// x. #Ecommerce Bar
+// ------------------------------
+
+
+.ecommerce-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: fade(@color-swatch1, 80%);
+    box-shadow: 0px 2px 4px 0px rgba(0,0,0,0.07);
+    height: 47px;
+    z-index: 1002;
+    @media @bp-global-small {
+        left: 0;
+        padding-right: 47px;
+
+    }
+
+
+
+
+    // Container
+    // ------------------------------
+
+
+    .container {
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+    }
+
+
+
+
+    // Template Search
+    // ------------------------------
+
+
+    .template-search {
+
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+
+        // Search Toggle
+
+        .search-toggle {
+            width: 47px;
+            height: 47px;
+            display: block;
+            line-height: 1;
+            letter-spacing: 0;
+            font-size: 16px;
+            box-shadow:  inset 0px 0px 0px 2px fade(@color-swatch2, 0%);
+            background-color: transparent;
+            -webkit-transition: all 0.1s ease-in-out;
+            -moz-transition: all 0.1s ease-in-out;
+            -o-transition: all 0.1s ease-in-out;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+                box-shadow:  inset 0px 0px 0px 2px @color-swatch2;
+                color: @color-swatch2;
+            }
+
+            // Icon
+            &:after {
+                display: block;
+                width: 100%;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                font-family: 'FontAwesome', sans-serif;
+                content: "\f002";
+                font-size: 19px;
+            }
+        }
+    }
+
+
+
+
+    // Template Basket
+    // ------------------------------
+
+
+    .template-basket {
+        -webkit-flex: 1 0 auto;
+        -ms-flex: 1 0 auto;
+        flex: 1 0 auto;
+
+        .widget {
+            border-left: 1px solid fade(@color-swatch5, 10%);
+            @media @bp-global-small, @bp-global-medium {
+                border-right: 1px solid fade(@color-swatch5, 10%);
+            }
+        }
+    }
+}
+
+
+
+
+// Search Overlay
+// ------------------------------
+
+.search--open {
+    overflow: hidden;
+    height: 100vh;
+}
+
+.search-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100vh;
+    background-color: @color-swatch2;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    -o-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+    z-index: 100000;
+    display: -ms-flexbox; // Default reset
+    display: -webkit-flex; // Default reset
+    display: flex; // Default reset
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: center;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding: 60px 40px 60px 40px;
+    -webkit-transform: translate(-100%, 0px);
+    -moz-transform: translate(-100%, 0px);
+    -o-transform: translate(-100%, 0px);
+    -ms-transform: translate(-100%, 0px);
+    transform: translate(-100%, 0px);
+    opacity: 0;
+
+    @media @mobile {
+        padding: 40px 12px 42px 12px;
+    }
+
+
+    @media @bp-global-large {
+        -webkit-transform: translate(100%, 0px);
+        -moz-transform: translate(100%, 0px);
+        -o-transform: translate(100%, 0px);
+        -ms-transform: translate(100%, 0px);
+        transform: translate(100%, 0px);
+
+    }
+
+    .search--open & {
+        -webkit-transform: translate(0%, 0px);
+        -moz-transform: translate(0%, 0px);
+        -o-transform: translate(0%, 0px);
+        -ms-transform: translate(0%, 0px);
+        transform: translate(0%, 0px);
+        opacity: 1;
+    }
+
+    // Close Icon
+
+    &:after {
+        content: "";
+        display: block;
+        width: 47px;
+        height: 47px;
+        background-image: image('/images/close.svg');
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: @color-swatch2;
+        cursor: pointer;
+        @media @bp-global-large, @bp-global-medium {
+            right: 0;
+            left: auto;
+        }
+    }
+}
+
+.search-overlay-form {
+    width: 100%;
+    max-width: 600px;
+}
+
+.search-overlay-form-group {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: flex-start;
+    -ms-flex-line-pack: start;
+    align-content: flex-start;
+    -webkit-align-items: stretch;
+    -ms-flex-align: stretch;
+    align-items: stretch;
+
+    width: 100%;
+    max-width: 600px;
+
+    .input--search {
+        -webkit-flex: 0 1 auto;
+        -ms-flex: 0 1 auto;
+        flex: 0 1 auto;
+        color: @color-swatch1;
+        font-size: 18px;
+        line-height: 1;
+        box-shadow: inset 0px -3px 0px 0px fade(@color-swatch1, 70%);
+        margin-right: 20px;
+
+        @media @mobile {
+            margin-right: 10px;
+        }
+
+        &:focus {
+            box-shadow: inset 0px -3px 0px 0px fade(@color-swatch1, 100%);
+        }
+    }
+
+    .button {
+        -webkit-flex: 0 0 auto;
+        -ms-flex: 0 0 auto;
+        flex: 0 0 auto;
+        background-color: @color-swatch1;
+        padding: 1em;
+        font-size: 18px;
+        line-height: 1;
+        box-shadow: none;
+
+        @media @mobile {
+            text-indent: 200%;
+            overflow: hidden;
+            width: 50px;
+            padding: 0;
+            height: 50px;
+            position: relative;
+
+            &:after {
+                display: block;
+                font-family: 'FontAwesome', sans-serif;
+                content: "\f002";
+                text-indent: 0;
+                text-align: center;
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+
+        &:hover {
+            background-color: fade(@color-swatch1, 80%);
+        }
+    }
+}
+
+
+.search-overlay-form-group ::-webkit-input-placeholder {
+   color: fade(@color-swatch1, 70%);
+}
+
+.search-overlay-form-group :-moz-placeholder { /* Firefox 18- */
+   color: fade(@color-swatch1, 70%);
+}
+
+.search-overlay-form-group ::-moz-placeholder {  /* Firefox 19+ */
+   color: fade(@color-swatch1, 70%);
+}
+
+.search-overlay-form-group :-ms-input-placeholder {
+   color: fade(@color-swatch1, 70%);
+}
+
+
+// ------------------------------
+// x. #Page Title
+// ------------------------------
+
+
+.pagetitle-text {
+    color: @color-swatch5;
+    line-height: 1.4;
+    margin-bottom: 1em;
+
+    @media @bp-global-large {
+        font-size: 34px;
+    }
+    @media @bp-global-medium {
+        font-size: 28px;
+    }
+    @media @bp-global-small {
+        font-size: 22px;
+    }
+}
+
+
+
+// ------------------------------
+// 3. #Floating Footer Fix
+// ------------------------------
+
+
+// Avoids Floating Footer
+// ------------------------------
+
+@media @bp-global-large, @bp-global-medium {
+    body {
+        display: -webkit-box;
+        display: -moz-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-direction: normal;
+        -moz-box-direction: normal;
+        -webkit-box-orient: vertical;
+        -moz-box-orient: vertical;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-box-pack: start;
+        -moz-box-pack: start;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-box-align: stretch;
+        -moz-box-align: stretch;
+        -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+        align-items: stretch;
+        min-height: 100vh;
+    }
+
+    .template-content {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+}
+
+
+
+// ------------------------------
+// 4. #Header
+// ------------------------------
+
+
+
+
+// Template Header
+// ------------------------------
+
+
+.template-header {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+
+
+    @media @bp-global-large {
+        padding: 54px 20px;
+    }
+
+    @media @bp-global-small, @bp-global-medium {
+        padding: 40px 10px;
+    }
+
+    // Container
+
+	.container {
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: stretch;
+        -ms-flex-line-pack: stretch;
+        align-content: stretch;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+
+
+	}
+
+    // Company
+
+    .company {
+
+
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        -webkit-align-content: center;
+        -ms-flex-line-pack: center;
+        align-content: center;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+    }
+
+    // Template Logo
+
+    .template-logo {
+         margin: 0 20px 0 0;
+    }
+
+    // Company Name
+
+    .template-companyname {
+
+    }
+
+    // Navigation
+
+    .template-navigation {
+        -webkit-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }
+}
+
+
+
+
+
+
+// ------------------------------
+// 5. #Footer
+// ------------------------------
+
+
+
+// Template Footer
+// ------------------------------
+
+
+.template-footer {
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+
+    @media @bp-global-large {
+        padding: 20px 20px;
+    }
+
+    @media @bp-global-small, @bp-global-medium {
+        padding: 16px 10px;
+    }
+
+
+
+    // Container
+    // ------------------------------
+
+
+	.container {
+        width: 70%;
+        margin: 0 auto;
+        border-top: 1px solid fade(@font-swatch5-color, 10%);
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-align-content: flex-start;
+        -ms-flex-line-pack: start;
+        align-content: flex-start;
+        -webkit-align-items: center;
+        -ms-flex-align: center;
+        align-items: center;
+        padding: 30px 0;
+
+        @media @bp-global-small {
+            padding: 16px 0;
+            display: block;
+            text-align: center;
+            width: auto;
+        }
+
+
+
+        // Widget
+
+        .widget {
+             @media @bp-global-small {
+                margin: 10px 0;
+             }
+        }
+	}
+}
+
+
+
+
+
+
+
+// ------------------------------
+// 6. #Main Zone
+// ------------------------------
+
+
+
+
+.zone-content {
+    .container {
+
+    }
+
+}
+
+
+
+
+
+
+// -------------------------------
+// 7. #Typography
+// -------------------------------
+
+
+
+
+a {
+	color: @color-swatch5;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+

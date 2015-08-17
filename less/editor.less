@@ -1,0 +1,49 @@
+// ------------------------------
+// Timeline Template: CSS > Editor
+// ------------------------------
+
+body.edit-mode {
+
+    // Ecommerce Bar
+    // ------------------------------
+
+    .ecommerce-bar {
+        z-index: 8001;
+    }
+
+    // Search Overlay Toggle
+    // ------------------------------
+
+    .ecommerce-bar .template-search .search-toggle {
+        cursor: default;
+    }
+
+    .ecommerce-bar .template-search .search-toggle:hover {
+        box-shadow: none;
+        color: inherit;
+    }
+
+    // Navigation
+    // ------------------------------
+
+    .widget[data-widget-type="extendednavigation"] {
+        .bk-overlay {
+            @media @bp-global-small {
+                position: fixed !important;
+                top: 0 !important;
+                right: 0 !important;
+                width: 47px !important;
+                height: 47px !important;
+                bottom: auto !important;
+                left: auto !important;
+                z-index: 8002 !important;
+            }
+        }
+    }
+
+    .navigation-toggle:hover {
+        background-color: @color-swatch2;
+        box-shadow: none;
+    }
+}
+

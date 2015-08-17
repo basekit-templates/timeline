@@ -1,0 +1,457 @@
+// -----------------------------
+// Timeline Template: CSS > Navigation
+// -----------------------------
+
+
+
+
+// ------------------------------
+// #Table of Contents
+// ------------------------------
+
+
+//  1.   Navigation Overlay
+
+
+
+
+
+
+
+
+
+// --------------------------------
+//  1.   Navigation Overlay
+// --------------------------------
+
+
+
+// Navigation Body
+// ------------------------------
+
+
+.navigation-body {
+	outline: 0;
+
+	@media @bp-global-small {
+		.animation;
+		position: fixed;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: @color-swatch1;
+		-webkit-transition: all 0.35s ease-in-out;
+		-moz-transition: all 0.35s ease-in-out;
+		-o-transition: all 0.35s ease-in-out;
+		transition: all 0.35s ease-in-out;
+		z-index: 1003;
+		height: 100vh;
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		-o-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		transform: scale(0.8);
+		-webkit-transform-origin: 100% 0%;
+		-moz-transform-origin: 100% 0%;
+		-o-transform-origin: 100% 0%;
+		-ms-transform-origin: 100% 0%;
+		transform-origin: 100% 0%;
+		opacity: 0;
+		pointer-events: none;
+	}
+
+	@media @bp-global-small {
+		// Scroll fade effect
+
+		&:before, &:after {
+			display: block;
+	        content: "";
+	        position: absolute;
+	        left: 0;
+	        width: 100%;
+	        height: 50px;
+	        z-index: 10002;
+		}
+
+	    &:before {
+	        top: 0;
+	        background-image: -webkit-linear-gradient(fade(@color-swatch1, 100%) 0%, fade(@color-swatch1, 0%) 100%);
+	        background-image: -o-linear-gradient(fade(@color-swatch1, 100%) 0%,fade(@color-swatch1, 0%) 100%);
+	        background-image: linear-gradient(fade(@color-swatch1, 100%) 0%, fade(@color-swatch1, 0%) 100%);
+		}
+
+		&:after {
+	        bottom: 0;
+	        background-image: -webkit-linear-gradient(fade(@color-swatch1, 0%) 0%, @color-swatch1 100%);
+	        background-image: -o-linear-gradient(fade(@color-swatch1, 0%) 0%, @color-swatch1 100%);
+	        background-image: linear-gradient(fade(@color-swatch1, 0%) 0%, @color-swatch1 100%);
+	    }
+    }
+}
+
+// When nav is open
+
+.widget__extendednavigation.open .navigation-body {
+	-webkit-transform: translate(0, 0);
+	-moz-transform: translate(0, 0);
+	-o-transform: translate(0, 0);
+	-ms-transform: translate(0, 0);
+	transform: translate(0, 0);
+	opacity: 1;
+	pointer-events: all;
+}
+
+
+
+
+
+
+// Navigation List
+// ------------------------------
+.navigation-list  {
+	margin: 0;
+
+}
+
+// Top level list
+
+.navigation-body > .navigation-list {
+	display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    -webkit-align-content: stretch;
+    -ms-flex-line-pack: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+
+    @media @bp-global-small {
+		-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+		flex-direction: column;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-webkit-align-items: stretch;
+		-ms-flex-align: stretch;
+		align-items: stretch;
+		margin: 50px 0;
+    }
+}
+
+
+
+// --------------------------------
+//  2.   Navigation Items
+// --------------------------------
+
+
+
+.navigation-item {
+	display: block;
+	margin: 0;
+	&, * {
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+}
+
+.navigation-item:not(.navigation-item--child) {
+	margin: 0 0 0 1.5em;
+}
+
+
+
+
+// Item Name
+// ------------------------------
+
+.navigation-item .item-name {
+	padding: 0.5em 0;
+
+	&:hover {
+		color: fade(@color-swatch5, 50%);
+	}
+}
+
+.navigation-item--child .item-name {
+	@media @bp-global-large, @bp-global-medium {
+		padding: 0.5em 10px;
+	}
+}
+
+
+
+
+
+
+
+// Selected Navigation Item
+// ------------------------------
+
+
+// Selected Item (not open folder)
+
+.navigation-body .navigation-item.selected:not(.open) > .item-name,
+.navigation-item.folder.selected:not(.open) > .item-name {
+	color: @color-swatch2;
+	position: relative;
+}
+
+
+
+
+
+
+
+// ------------------------------
+//	3.   Folder Item
+// ------------------------------
+
+
+
+
+.navigation-item.folder {
+	-webkit-transition: all 0.15s ease-in-out;
+	-moz-transition: all 0.15s ease-in-out;
+	-o-transition: all 0.15s ease-in-out;
+	transition: all 0.15s ease-in-out;
+}
+
+// Open Folder navigation item
+
+.navigation-item.folder.open {
+
+}
+
+// Navigation Item Name
+
+.navigation-item.folder > .item-name {
+
+	// Folder Icon
+	&:after {
+		content: "\f107";
+		font-family: 'FontAwesome', sans-serif;
+		margin-left: 0.4em;
+		display: inline-block;
+		width: 0.8em;
+		height: 0.8em;
+		line-height: 0.8em;
+		text-align: center;
+		// Folder icon animation
+		-webkit-transform: rotate(-90deg);
+		-moz-transform: rotate(-90deg);
+		-o-transform: rotate(-90deg);
+		-ms-transform: rotate(-90deg);
+		transform: rotate(-90deg);
+		-webkit-transition: all 0.15s ease-in-out;
+		-moz-transition: all 0.15s ease-in-out;
+		-o-transition: all 0.15s ease-in-out;
+		transition: all 0.15s ease-in-out;
+	}
+}
+
+// Folder's Item Names
+
+.navigation-item.folder .navigation-item .item-name {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	font-size: bkscale(@font-swatch6-font-size, 0.8);
+}
+
+// Open Navigaiton Folder
+
+.navigation-item.folder.open > .item-name {
+
+
+	&:hover {
+		color: @font-swatch6-color;
+	}
+
+	&:after {
+		// Folder icon animation
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+}
+
+
+
+
+// Folder List Items
+// ------------------------------
+
+
+.navigation-list--children {
+	white-space: inherit;
+	z-index: 10000;
+	display: block;
+	padding-right: 0;
+	-webkit-transition: all 0.4s ease-in-out;
+	-moz-transition: all 0.4s ease-in-out;
+	-o-transition: all 0.4s ease-in-out;
+	transition: all 0.4s ease-in-out;
+	opacity: 0;
+	left: 0;
+	pointer-events: none;
+	border-radius: 4px;
+
+	@media @bp-global-large, @bp-global-medium {
+		position: absolute;
+		top: 50%;
+		max-width: 150px;
+	}
+
+	@media @bp-global-small {
+		position: static;
+		height: 0;
+		overflow: hidden;
+		background-color: transparent;
+	}
+
+	// Open folder item
+
+	.navigation-item.folder.open & {
+		display: block;
+		opacity: 1;
+
+		top: 100%;
+		pointer-events: all;
+
+		@media @bp-global-large, @bp-global-medium {
+			background-color: mix(@font-swatch6-color, @color-swatch1, 5%);
+		}
+
+		@media @bp-global-small {
+			height: auto;
+			background-color: transparent;
+		}
+	}
+
+}
+
+// Less Framework Reset
+
+.navigation-item:hover .navigation-list--children {
+	display: block;
+}
+
+
+
+
+
+
+
+
+// ------------------------------
+//  4.   Pull Down Navigation
+// ------------------------------
+
+
+
+
+.navigation-toggle {
+	.animation;
+	// Displays as icon's middle bar
+	background-color: @color-swatch3;
+	background-clip: content-box;
+	width: 41px;
+	height: 41px;
+	padding: 19px 10px;
+	margin: 0;
+	text-indent: 200%;
+	display: none;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	right: 0;
+	z-index: 10000;
+	box-shadow:  inset 0px 0px 0px 2px fade(@color-swatch3, 0%);
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition: all 0.1s ease-in-out;
+	-o-transition: all 0.1s ease-in-out;
+	transition: all 0.1s ease-in-out;
+
+	@media @bp-global-small {
+		display: block;
+	}
+
+	.basket--open &, .search--open & {
+		display: none;
+	}
+
+	// Top and bottom navigation item bar
+
+	&:after, &:before {
+		content: "";
+		height: 3px;
+		width: 21px;
+		position: absolute;
+		left: 10px;
+		display: block;
+		background: @color-swatch3;
+		margin-right: 0;
+		margin-left: 0;
+		-webkit-transition: all 0.25s ease-in-out;
+		-moz-transition: all 0.25s ease-in-out;
+		-o-transition: all 0.25s ease-in-out;
+		transition: all 0.25s ease-in-out;
+	}
+
+	// Top bar
+
+	&:before {
+		top: 13px;
+
+	}
+
+	// Bottom bar
+
+	&:after {
+		bottom: 13px;
+	}
+
+	&:hover {
+		background-color: @color-swatch2;
+		box-shadow:  inset 0px 0px 0px 2px @color-swatch2;
+
+		&:after, &:before {
+			background: @color-swatch2;
+		}
+	}
+
+
+
+
+
+	// Toggle Button open state
+	// ------------------------------
+
+	.open & {
+		background-color: transparent;
+		box-shadow: none;
+
+
+		&:before {
+			top: 20px; background: @color-swatch3; -webkit-transform: rotate(45deg); -moz-transform: rotate(45deg); -o-transform: rotate(45deg); -ms-transform: rotate(45deg); transform: rotate(45deg);
+
+		}
+		&:after {
+			bottom: 18px; background: @color-swatch3; -webkit-transform: rotate(-45deg); -moz-transform: rotate(-45deg); -o-transform: rotate(-45deg); -ms-transform: rotate(-45deg); transform: rotate(-45deg);
+		}
+	}
+}
+
+

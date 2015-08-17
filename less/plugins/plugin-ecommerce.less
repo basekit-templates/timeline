@@ -1,0 +1,169 @@
+// ------------------------------------
+// Timeline Template: CSS > Plugin: Ecommerce
+// ------------------------------------
+
+
+
+
+// ------------------------------
+// Products Listing
+// ------------------------------
+
+
+@import "@{templateLocal}/less/plugins/ecommerce/products-listing.less";
+
+
+
+
+// ------------------------------
+// Product
+// ------------------------------
+
+
+@import "@{templateLocal}/less/plugins/ecommerce/product.less";
+@import "@{templateLocal}/less/plugins/ecommerce/product-gallery.less";
+
+
+
+
+// ------------------------------
+// Featured Products
+// ------------------------------
+
+
+@import "@{templateLocal}/less/plugins/ecommerce/featured-products.less";
+
+
+
+
+// ------------------------------
+// Products Listing
+// ------------------------------
+
+
+@import "@{templateLocal}/less/plugins/ecommerce/basket-summary.less";
+
+
+
+
+// ------------------------------
+// Terms and Conditions
+// ------------------------------
+
+.widget__ecomlegal p {
+    @media @bp-global-medium {
+        font-size: bkscale(@font-swatch5-font-size, 0.9);
+        line-height: bkscale(@font-swatch5-line-height, 0.9);
+    }
+
+    @media @bp-global-small {
+        font-size: bkscale(@font-swatch5-font-size, 0.8);
+        line-height: bkscale(@font-swatch5-line-height, 0.8);
+    }
+}
+
+
+
+// ------------------------------
+// Basket
+// ------------------------------
+
+
+@import "@{templateLocal}/less/plugins/ecommerce/basket.less";
+
+
+
+
+
+
+// ------------------------------
+// Categories
+// ------------------------------
+
+
+
+
+// Categories Title
+// ------------------------------
+
+
+.category-list-body h3 {
+    font-family: @font-swatch2-font-family;
+    font-size: @font-swatch2-font-size;
+    line-height: @font-swatch2-line-height;
+    font-weight: @font-swatch2-font-weight;
+    color: @font-swatch2-color;
+    margin-bottom: 0.2em;
+
+    @media @bp-global-medium {
+        font-size: bkscale(@font-swatch2-font-size, 0.8);
+        line-height: bkscale(@font-swatch2-line-height, 0.8);
+    }
+
+    @media @bp-global-small {
+        font-size: bkscale(@font-swatch2-font-size, 0.7);
+        line-height: bkscale(@font-swatch2-line-height, 0.7);
+    }
+}
+
+
+
+
+// Category List
+// ------------------------------
+
+
+.category-list {
+    margin: 0;
+}
+
+
+
+
+// Category Item
+// ------------------------------
+
+
+.ecomcategorieslist__category-item {
+    display: inline-block;
+    margin: 0 1em 0.5em 0;
+
+
+
+    // Link
+    // ------------------------------
+
+
+    a {
+        font-size: @font-swatch7-font-size;
+        font-family: @font-swatch7-font-family;
+        font-weight: @font-swatch7-font-weight;
+        box-shadow: inset 0px -1px 0px 0px @color-swatch2;
+        display: inline-block;
+        line-height: 1.8;
+        margin-top: 0.5em;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
+            background-color: fade(@color-swatch2, 7%);
+        }
+    }
+
+
+
+
+    // Item Count
+    // ------------------------------
+
+
+    .item-count {
+        margin-left: 0.5em;
+        color: fade(@font-swatch5-color, 50%);
+    }
+}
+
+

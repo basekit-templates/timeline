@@ -1,0 +1,362 @@
+// ------------------------------------
+// Timeline Template: CSS > Widgets > Profile
+// ------------------------------------
+
+
+// -----------------------------
+// #Table of Contents
+// -----------------------------
+
+//  1.   #Typography
+//  2.   #Address
+//  3.   #Email
+//  4.   #Phone
+//  5.   #Latest Tweet
+//  6.   #Single Email Form
+//  7.   #Social Icons
+//  8.   #Map
+
+
+
+
+// ------------------------------
+// 1.   #Typography
+// ------------------------------
+
+
+.widget__profile {
+
+
+	// Standard Text
+	// ------------------------------
+
+
+	&, p, h2, h3, a, span .socialicons__social-name {
+		color: fade(@font-swatch5-color, 70%);
+		font-family: @font-swatch5-font-family;
+		font-size: 14px;
+		line-height: 1.4;
+		padding-bottom: 0;
+
+		@media @mobile {
+			font-size: 14px;
+		}
+
+		@media @mobile {
+			font-size: 12px;
+		}
+	}
+
+
+	// Headlines
+	// ------------------------------
+
+
+	.company-strapline, .company-description__description, .company-business__business {
+
+		font-size: 18px;
+		line-height: 1.5;
+
+		@media @mobile {
+			font-size: 16px;
+		}
+	}
+
+
+	// Links
+	// ------------------------------
+
+
+	a {
+		color: fade(@font-swatch5-color, 70%);
+		opacity: 0.8;
+		&:hover {
+			opacity: 1;
+		}
+	}
+
+}
+
+
+
+
+// ------------------------------
+// 2.   #Address
+// ------------------------------
+
+
+.companyaddress__vcard {
+
+
+	// Paragraph
+	// ------------------------------
+
+
+	p {
+		display: inline;
+		&:after {
+			content: ",";
+			margin-left: -0.2em;
+		}
+		&:last-child:after {
+			display: none;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// 3.   #Email
+// ------------------------------
+
+
+.emailaddress__email {
+
+
+	// Icon Envelope
+	// ------------------------------
+
+
+	&:before {
+		content: '\f003';
+		font-family: 'FontAwesome', sans-serif;
+		margin-right: 0.5em;
+		display: inline-block;
+		vertical-align: middle;
+		color: @font-swatch7-color;
+		background-color: fade(@font-swatch5-color, 10%);
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-size: 14px;
+		border-radius: 50px;
+		text-align: center;
+	}
+
+	&:hover:before {
+		background-color: @color-swatch2;
+		color: @color-swatch1;
+	}
+}
+
+
+
+
+// ------------------------------
+// 4.   #Phone
+// ------------------------------
+
+
+.widget__profile {
+	.phone-number-link {
+
+
+		// Icon
+		// ------------------------------
+
+
+		&:before {
+			content: '\f095';
+			font-family: 'FontAwesome', sans-serif;
+			margin-right: 0.5em;
+			display: inline-block;
+			vertical-align: middle;
+			color: @font-swatch7-color;
+			background-color: fade(@font-swatch5-color, 10%);
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 14px;
+			border-radius: 50px;
+			text-align: center;
+		}
+
+		&:hover:before {
+			background-color: @color-swatch2;
+			color: @color-swatch1;
+		}
+	}
+}
+
+
+
+
+// ------------------------------
+// Latest Tweet
+// ------------------------------
+
+
+// Modifications to suit the footer design
+// Original styles: css/widgets/twitter.less
+
+.widget__profile {
+
+
+
+
+	// Avatar Image
+	// ------------------------------
+
+
+	.twitter__avatar-image {
+		width: 40px;
+		height: 40px;
+	}
+
+
+
+
+	// Tweet Content
+	// ------------------------------
+
+	.tweet-content {
+		padding: 0.3em 0;
+	}
+}
+
+
+
+
+// ------------------------------
+// Single Email Form
+// ------------------------------
+
+
+.widget__profile {
+
+
+
+
+	// Form Body
+	// ------------------------------
+
+
+	.signupform__form-body {
+		display: -ms-flexbox;
+	    display: -webkit-flex;
+	    display: flex;
+	    -webkit-justify-content: flex-start;
+	    -ms-flex-pack: start;
+	    justify-content: flex-start;
+	    -webkit-align-content: stretch;
+	    -ms-flex-line-pack: stretch;
+	    align-content: stretch;
+	    -webkit-align-items: flex-end;
+   		-ms-flex-align: end;
+    	align-items: flex-end;
+		margin-top: 20px;
+	}
+
+
+
+
+	// Label
+	// ------------------------------
+
+
+	.signupform__label {
+		display: none;
+	}
+
+
+
+
+	// Form Group
+	// ------------------------------
+
+
+	.signupform__form-group {
+		margin-bottom: 0;
+
+		&:first-child {
+			margin-right: 6px;
+			-webkit-flex: 1 0 auto;
+			-ms-flex: 1 0 auto;
+			flex: 1 0 auto;
+		}
+	}
+}
+
+
+
+
+
+// ------------------------------
+// 7.   #Social Icons
+// ------------------------------
+
+
+// Modifications to suit the footer design
+// Original styles: css/widgets/social-list.less
+
+
+.widget__profile {
+
+
+
+
+	// Social Item
+	// ------------------------------
+
+
+	.social-item {
+		margin: 0 0 4px 4px;
+	}
+
+
+
+
+	// Social Name
+	// ------------------------------
+
+
+	.socialicons__social-name {
+		display: none;
+	}
+
+
+
+
+	// Social Link
+	// ------------------------------
+
+
+	.social-link {
+
+		// Icon
+
+		&:before {
+			box-shadow: none;
+			color: @font-swatch7-color;
+			background-color: transparent;
+			width: 30px;
+			height: 30px;
+			line-height: 30px;
+			font-size: 14px;
+			border-radius: 50px;
+			box-shadow: inset 0px 0px 0px 2px @font-swatch7-color;
+		}
+
+		&:hover:before {
+			color: @color-swatch2;
+			box-shadow: inset 0px 0px 0px 2px @color-swatch2;
+		}
+	}
+}
+
+
+
+
+
+
+
+// ------------------------------
+// 8.   #Map
+// ------------------------------
+
+
+.profile__map {
+	min-width: 260px;
+}
