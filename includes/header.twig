@@ -16,6 +16,14 @@
 			{{widget('extendednavigation', 'extendednavigation', {"align":"left"})|raw}}
 		</div>
 
+				{% if plugins.ecommerce.store.live %}
+				<div class="ecommerce-bar">
+					<div class="container">
+						<div class="template-basket">{{widget('ecombasket', 'shopbasket', {})|raw}}</div>
+					</div>
+				</div>
+				{% endif %}
+
 	</div>
 
 </header>

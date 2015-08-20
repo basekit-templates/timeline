@@ -63,8 +63,9 @@
     .table-row--heading {
         .cell {
             padding-bottom: 1.6em;
-            font-family: @font-swatch1-font-family;
-            font-size: bkscale(@font-swatch5-font-size, .82);
+            font-family: @font-swatch5-font-family;
+            font-size: 12px;
+            color: fade(@color-swatch5, 50%);
 
             &:nth-last-of-type(-n+2) {
                 text-align: right;
@@ -120,7 +121,7 @@
     .summary-item-title  {
         font-family: @font-swatch1-font-family;
         font-weight: @font-swatch1-font-weight;
-        font-size: @font-swatch4-font-size;
+        font-size: @font-swatch5-font-size;
     }
 
         // Item Link
@@ -155,6 +156,7 @@
 
         p {
             font-size: 16px;
+            font-family: @font-swatch1-font-family;
         }
     }
 
@@ -260,7 +262,7 @@
             height: 26px;
             line-height: 26px;
             text-align: center;
-            background-color: fade(@color-swatch5, 10%);
+            background-color: @color-swatch3;
             border-radius: 15px;
         }
 
@@ -401,6 +403,7 @@
                 display: block;
                 font-size: 13px;
                 color: fade(@font-swatch5-color, 80%);
+                font-family: @font-swatch5-font-family;
             }
         }
 
@@ -427,6 +430,7 @@
                 position: absolute;
                 right: 110px;
                 top: 6px;
+
             }
         }
 

@@ -5,7 +5,7 @@
     "screenshot": "timeline.png",
     "screenshot":"timeline-screenshot.jpg",
     "templateType":"ecommerce",
-    "pageTypes": ["home"],
+    "pageTypes": ["home","ecomproductslist"],
     "tags": {
     "en": ["shopping", "ecommerce", "business", "store", "boutique", "minimal", "clean", "multipurpose", "simple", "contemporary", "flexible", "modern", "photography"],
     "es": ["compras", "ecommerce", "negocios", "tienda", "boutique", "minimalista", "limpio", "multiuso", "simple", "contemporáneo", "flexible", "moderno", "fotográfico"],
@@ -101,7 +101,7 @@
             "font-family": "\"Noto Serif\", Georgia, Arial, sans-serif",
             "font-size": "18px",
             "font-weight": "400",
-            "line-height": "29px",
+            "line-height": "31px",
             "color": "@color-swatch5",
             "letter-spacing": "inherit"
         },
@@ -121,7 +121,7 @@
             "font-size": "14px",
             "font-weight": "700",
             "line-height": "27px",
-            "color": "@color-swatch3",
+            "color": "@color-swatch1",
             "letter-spacing": "inherit",
             "background-color": "@color-swatch3",
             "background-color-hover": "@color-swatch3"

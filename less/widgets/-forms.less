@@ -36,7 +36,7 @@ input[type="password"],
 textarea {
     background-color: transparent;
     border: none;
-    box-shadow: inset 0px -2px 0px 0px fade(@font-swatch5-color, 20%);
+    box-shadow: inset 0px -1px 0px 0px fade(@font-swatch5-color, 20%);
     font-weight: @font-swatch5-font-weight;
     display: inline-block;
     color: @font-swatch5-color;
@@ -112,20 +112,22 @@ textarea {
     font-weight: @font-swatch7-font-weight;
     display: inline-block;
     cursor: pointer;
-    -webkit-transition: all 0.1s ease-in-out;
-    -moz-transition: all 0.1s ease-in-out;
-    -o-transition: all 0.1s ease-in-out;
-    transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     text-align: left;
     -webkit-appearance: none;
-    box-shadow: inset 0px -2px 0px 0 @color-swatch2;
+    box-shadow: inset 0px -2px 0px 0 @color-swatch3;
     background-color:  @color-swatch3;
     border-radius: 0;
     position: relative;
     z-index: 100;
 
+
+
     &:hover {
-        background-color: fade(@color-swatch2, 7%);
+        box-shadow: inset 0px -40px 0px 0 @color-swatch2;
     }
 
     &:focus {
@@ -151,7 +153,7 @@ textarea {
 
 .select-wrap {
     position: relative;
-    box-shadow: inset 0px -2px 0px 0px fade(@font-swatch5-color, 20%);
+    box-shadow: inset 0px -1px 0px 0px fade(@font-swatch5-color, 20%);
 
     &:hover {
         box-shadow: inset 0px -2px 0px 0px @color-swatch2;

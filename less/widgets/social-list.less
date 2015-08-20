@@ -11,7 +11,7 @@
 
 
 .social-item {
-	margin: 0 1em 6px 0;
+	margin: 0 6px 6px 0;
 	display: inline-block;
 }
 
@@ -33,14 +33,15 @@
 	// Icon
 
 	&:before {
-		font-size: 24px;
+		font-size: 18px;
 		display: block;
-		width: 50px;
-		height: 50px;
-		line-height: 50px;
-		background-color: transparent;
-		color: @font-swatch7-color;
+		width: 36px;
+		height: 36px;
+		line-height: 36px;
+		background-color: @color-swatch7;
+		color: @color-swatch1;
 		margin: 0 auto;
+		border-radius: 50px;
 
 		@media @tablet {
 			font-size: 20px;
@@ -62,7 +63,7 @@
 	// Icon hover
 
 	&:hover:before {
-		background-color: fade(@font-swatch7-color, 7%);
+		background-color: @color-swatch2;
 	}
 }
 
@@ -74,10 +75,5 @@
 
 
 .socialicons__social-name {
-	display: inline-block;
-	font-family: @font-swatch7-font-family;
-	font-weight: @font-swatch7-font-weight;
-	line-height: @font-swatch7-line-height;
-	font-size: @font-swatch7-font-size;
-	box-shadow: inset 0px -2px 0px 0 @color-swatch2;
+	display: none;
 }

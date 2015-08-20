@@ -14,6 +14,29 @@
 }
 
 
+// Legend
+// ------------------------------
+
+
+.contactform__legend {
+	font-family: @font-swatch3-font-family;
+	font-size: @font-swatch3-font-size;
+	line-height: @font-swatch3-line-height;
+	font-weight: @font-swatch3-font-weight;
+	color: @font-swatch2-color;
+	margin-bottom: 0.6em;
+
+	@media @bp-global-medium {
+		font-size: bkscale(@font-swatch2-font-size, 0.8);
+		line-height: bkscale(@font-swatch2-line-height, 0.8);
+	}
+
+	@media @bp-global-small {
+		font-size: bkscale(@font-swatch2-font-size, 0.7);
+		line-height: bkscale(@font-swatch2-line-height, 0.7);
+	}
+}
+
 
 
 // Form Group
@@ -63,31 +86,43 @@
 
 .contactform__form-body {
 
+	// Form Group
+
+	.form-group {
+		padding-left: 2em;
+		position: relative;
+
+		@media @bp-global-small {
+			padding-left: 1.5em;
+		}
+
+		// Icons
+
+		&:before {
+			font-family: 'FontAwesome', sans-serif;
+			position: absolute;
+			left: 0;
+			color: @color-swatch2;
+			font-size: 14px;
+		}
+	}
+
+	.form-group:nth-child(1) {
+		&:before {
+			content: "\f003";
+			top: 0.4em;
+		}
+	}
+	.form-group:nth-child(2) {
+		&:before {
+			content: "\f036";
+			top: 0.15em;
+		}
+	}
 }
 
 
 
 
-// Legend
-// ------------------------------
 
-
-.contactform__legend {
-	font-family: @font-swatch2-font-family;
-	font-size: @font-swatch2-font-size;
-	line-height: @font-swatch2-line-height;
-	font-weight: @font-swatch2-font-weight;
-	color: @font-swatch2-color;
-	margin-bottom: 0.2em;
-
-	@media @bp-global-medium {
-		font-size: bkscale(@font-swatch2-font-size, 0.8);
-		line-height: bkscale(@font-swatch2-line-height, 0.8);
-	}
-
-	@media @bp-global-small {
-		font-size: bkscale(@font-swatch2-font-size, 0.7);
-		line-height: bkscale(@font-swatch2-line-height, 0.7);
-	}
-}
 

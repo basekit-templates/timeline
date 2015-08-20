@@ -174,9 +174,9 @@
 			// Custom Bullets
 
 			&:before {
-				width: 13px;
-				height: 13px;
-				border-radius: 13px;
+				width: 0.8em;
+				height: 0.8em;
+				border-radius: 30px;
 				display: block;
 				box-shadow: inset 0px 0px 0px 2px @font-swatch1-color;
 				content: "";
@@ -239,6 +239,7 @@
 				line-height: 2.5em;
 				text-align: center;
 				font-size: bkscale(@font-swatch5-font-size, 0.8);
+				font-weight: bold;
 
 				@media @bp-global-medium {
 					font-size: bkscale(@font-swatch5-font-size, 0.7);
@@ -265,7 +266,7 @@
 		font-size: @font-swatch4-font-size;
 		line-height: @font-swatch4-line-height;
 		margin: 2.4em auto;
-		padding: 1.5em 0 1.5em 60px;
+		padding: 2em 0 2em 4em;
 		color: @font-swatch1-color;
 		border-top: 1px solid fade(@font-swatch5-color, 10%);
 		border-bottom: 1px solid fade(@font-swatch5-color, 10%);
@@ -278,26 +279,34 @@
 		@media @bp-global-small {
 			font-size: bkscale(@font-swatch4-font-size, 0.8);
 			line-height: bkscale(@font-swatch4-line-height, 0.8);
-			padding: 0.25em 0 0.25em 50px;
+			padding-left: 3em;
 		}
 
 		&:before {
 			font-family: 'FontAwesome', sans-serif;
 		    content: "\f10d";
-		    color: @font-swath1-color;
+		    color: @font-swatch1-color;
 		    position: absolute;
 		    top: 50%;
 		    bottom: 0;
 		    left: 0;
-		    width: 40px;
-		    height: 40px;
+		    width: 2em;
+		    height: 2em;
 		    text-align: center;
-		    font-size: 36px;
+		    font-size: 2em;
 		    font-style: normal;
-		    height: 40px;
+		    height: 2em;
 		    line-height: 40px;
 		    text-align: center;
 		    margin-top: -20px;
+
+		    @media @bp-global-medium {
+				font-size: 1.5em;
+			}
+
+			@media @bp-global-small {
+				font-size: 1.2em;
+			}
 		}
 
 	}

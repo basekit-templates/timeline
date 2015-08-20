@@ -3,7 +3,17 @@
 // ------------------------------------------------
 
 
+.product-gallery {
+    float: left;
+    width: 45%;
 
+}
+
+.widget[data-name="ecomproduct"] {
+    float: right;
+    clear: none;
+    width: 51%;
+}
 
 // ------------------------------
 // Product
@@ -117,16 +127,8 @@
 .product-header {
     .clearfix;
     position: relative;
-    top: -1em;
+    top: 0;
     z-index: 1;
-
-    // Message
-
-    .message {
-        float: left;
-        clear: both;
-        margin: 0;
-    }
 }
 
     // Product Title
@@ -137,11 +139,6 @@
         font-weight: @font-swatch1-font-weight;
         position: relative;
         margin: 0;
-        color: @color-swatch1;
-        padding: 20px 30px;
-        background-color: fade(@color-swatch2, 80%);
-        line-height: inherit;
-        float: left;
 
         @media @bp-global-medium {
             font-size: bkscale(@font-swatch1-font-size, 0.8);
@@ -151,6 +148,15 @@
         @media @bp-global-small {
             font-size: bkscale(@font-swatch1-font-size, 0.7);
             line-height: bkscale(@font-swatch1-line-height, 0.7);
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            width: 1.5em;
+            height: 3px;
+            background-color: @color-swatch2;
+            margin-top: 0.3em;
         }
     }
 
@@ -189,7 +195,7 @@
 .product-body {
     clear: both;
 
-    margin: 20px 0;
+    margin: 40px 0;
 
     // Paragraph
 
@@ -303,7 +309,7 @@
 
 .product-attributes {
     clear: both;
-
+    margin: 50px 0 0 0;
 
 
     // Attribute Title
@@ -371,10 +377,9 @@
 
 
     .category-link, .tag-link {
-        font-size: @font-swatch7-font-size;
+        font-size: 12px;
         font-family: @font-swatch7-font-family;
         font-weight: @font-swatch7-font-weight;
-        box-shadow: inset 0px -1px 0px 0px @color-swatch2;
         display: inline-block;
         line-height: 1.8;
         margin-top: 0.5em;
@@ -384,9 +389,9 @@
         transition: all 0.2s ease-in-out;
 
         &:hover {
-            box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
-            background-color: fade(@color-swatch2, 7%);
+            color: @color-swatch2;
         }
+
 
         &:first-letter {
             text-transform: uppercase;

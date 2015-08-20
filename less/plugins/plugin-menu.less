@@ -59,8 +59,7 @@
 
 .section-header {
     margin-bottom: 4%;
-    background-color: @color-swatch2;
-    padding: 30px 30px;
+    padding: 30px 0;
 }
 
 
@@ -75,7 +74,6 @@
     line-height: bkscale(@font-swatch1-line-height, 1);
     font-weight: @font-swatch1-font-weight;
     position: relative;
-    color: @color-swatch1;
     line-height: inherit;
 
     @media @bp-global-medium {
@@ -96,7 +94,6 @@
 
 
 .section-description {
-    color: @color-swatch1;
     font-size: bkscale(@font-swatch5-font-size, 0.85);
     line-height: bkscale(@font-swatch5-line-height, 0.85);
 }
@@ -198,6 +195,10 @@
     margin-bottom: 60px;
     text-align: left;
 
+    @media @bp-global-small {
+        margin-bottom: 20px;
+    }
+
 
 
 
@@ -219,7 +220,7 @@
 
 
     .item-image {
-        margin-bottom: -20px;
+        margin-bottom: 2px;
         height: 0;
         padding-bottom: 100%;
         position: relative;
@@ -272,30 +273,35 @@
     .item-header {
         .clearfix;
         padding: 0;
-        margin: 0 20px;
+        margin: 0;
     }
 
 
     // Item Title
 
     .item-title {
+        padding-top: 12px;
         font-family: @font-swatch1-font-family;
-        font-size: @font-swatch4-font-size;
-        font-weight: @font-swatch4-font-weight;
-        line-height: @font-swatch4-line-height;
-        background-color: fade(@color-swatch2, 80%);
-        color: @color-swatch1;
-        padding: 0.8em 20px;
-        float: left;
-        position: relative;
+        font-size: @font-swatch3-font-size;
+        font-weight: @font-swatch3-font-weight;
+        line-height: @font-swatch3-line-height;
+        color: @font-swatch1-color;
+
+        &:after {
+            content: "";
+            display: block;
+            width: 1.5em;
+            height: 3px;
+            background-color: @color-swatch2;
+            margin-top: 0.3em;
+        }
     }
 
     // Item Price
 
     .item-price {
         color: @font-swatch5-color;
-        background-color:  darken(fade(@color-swatch1, 90%), 3%);
-        padding: 0.5em 20px;
+        padding: 0.5em 0;
         float: left;
         clear: both;
         font-size: @font-swatch7-font-size;
@@ -306,7 +312,7 @@
     // Item Description
 
     .item-description {
-        margin: 20px 20px 0 20px;
+        margin: 16px 0 0 0;
 
         &, p {
             font-family: @font-swatch5-font-family;
@@ -327,7 +333,7 @@
     // Item Footer
 
     .item-footer {
-        margin: 0 20px;
+        margin: 0;
     }
 
     // Item Subtitle
@@ -341,22 +347,23 @@
 
     .item-details {
         color: fade(@font-swatch5-color, 70%);
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
-        line-height: bkscale(@font-swatch5-line-height, 0.8);
+        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        line-height: bkscale(@font-swatch5-line-height, 0.7);
 
         @media @bp-global-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.7);
-            line-height: bkscale(@font-swatch5-line-height, 0.7);
-        }
-        @media @bp-global-small {
             font-size: bkscale(@font-swatch5-font-size, 0.6);
             line-height: bkscale(@font-swatch5-line-height, 0.6);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font-swatch5-font-size, 0.5);
+            line-height: bkscale(@font-swatch5-line-height, 0.5);
         }
     }
 
     // Dietary List
 
     .dietary-list {
+        line-height: 1;
         @media @bp-global-medium {
             display: inline-block;
             margin-right: 1em;
@@ -367,16 +374,16 @@
 
     .dietary-item {
         color: fade(@font-swatch5-color, 70%);
-        font-size: bkscale(@font-swatch5-font-size, 0.8);
-        line-height: bkscale(@font-swatch5-line-height, 0.8);
+        font-size: bkscale(@font-swatch5-font-size, 0.7);
+        line-height: bkscale(@font-swatch5-line-height, 0.7);
 
         @media @bp-global-medium {
-            font-size: bkscale(@font-swatch5-font-size, 0.7);
-            line-height: bkscale(@font-swatch5-line-height, 0.7);
-        }
-        @media @bp-global-small {
             font-size: bkscale(@font-swatch5-font-size, 0.6);
             line-height: bkscale(@font-swatch5-line-height, 0.6);
+        }
+        @media @bp-global-small {
+            font-size: bkscale(@font-swatch5-font-size, 0.5);
+            line-height: bkscale(@font-swatch5-line-height, 0.5);
         }
 
         &:before {
@@ -437,13 +444,7 @@
     // Item Title
 
     .item-title {
-        background-color: fade(spin(@color-swatch2, 60), 80%);
-    }
-
-    // Item Price
-
-    .item-price {
-        background-color: fade(spin(@color-swatch2, 60), 20%);
+        background-color: fade(@color-swatch2, 10%);
     }
 }
 
@@ -456,9 +457,9 @@
 
 
 .menu-subsection {
-    margin: 0;
+    margin: 0 0 30px 0;
     position: relative;
-
+    border: 1px solid fade(@font-swatch5-color, 10%);
 
     @media @bp-global-large {
         padding: 30px;
@@ -483,7 +484,7 @@
 
 
     .section-header {
-        background-color: fade(@font-swatch5-color, 3%);
+        padding: 0;
 
         // Section Title
 
@@ -546,6 +547,7 @@
 
 
     .item-title {
+
         font-size: bkscale(@font-swatch1-font-size, 0.7);
         line-height: bkscale(@font-swatch1-line-height, 0.7);
         @media @bp-global-medium {
@@ -602,7 +604,6 @@
     // ------------------------------
 
     .section-header {
-        background-color: fade(spin(@color-swatch2, 60), 80%);
         border-bottom: none;
 
     }
@@ -610,25 +611,17 @@
         // Section Title
 
         .section-title {
-            color: @color-swatch1 !important;
         }
 
         // Section SubTitle
 
         .section-subtitle {
-            color: @color-swatch1;
         }
 
     // Item Title
 
     .item-title {
-        background-color: fade(spin(@color-swatch2, 60), 80%);
-    }
-
-    // Item Price
-
-    .item-price {
-        background-color: fade(spin(@color-swatch2, 60), 20%);
+        background-color: fade(@color-swatch2, 10%);
     }
 }
 
@@ -658,7 +651,6 @@
         font-size: @font-swatch7-font-size;
         font-family: @font-swatch7-font-family;
         font-weight: @font-swatch7-font-weight;
-        box-shadow: inset 0px -1px 0px 0px @color-swatch2;
         display: inline-block;
         line-height: 1.8;
         margin-top: 0.5em;
@@ -668,8 +660,13 @@
         transition: all 0.2s ease-in-out;
 
         &:hover {
-            box-shadow: inset 0px -1px 0px 0px @color-swatch2, 0px 0px 0px 5px fade(@color-swatch2, 7%);
-            background-color: fade(@color-swatch2, 7%);
+            color: @color-swatch2;
+        }
+
+        &:before {
+            font-family: 'FontAwesome', sans-serif;
+            content: "\f0f5";
+            margin-right: 0.5em;
         }
     }
 }

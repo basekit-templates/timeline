@@ -9,7 +9,7 @@
 // ------------------------------
 
 
-.pagination-list:not(.responsiveslideshow__pagination-list) {
+.pagination-list:not(.responsiveslideshow__pagination-list):not(.blogpostlist__pagination-list) {
     .clearfix;
     font-size: 1.5em;
     line-height: 1.5em;
@@ -27,7 +27,7 @@
         background: transparent;
         color: @color-swatch6;
         font-family: @font-swatch7-font-family;
-        font-size: @font-swatch5-font-size;
+
         line-height: 1;
         display: block;
         box-shadow: none;
@@ -138,11 +138,16 @@
 
 
     .button--pagination:not(.icon) {
-        box-shadow: inset 0px -2px 0px 0px @color-swatch2;
+        background-color: @color-swatch7;
+        color: @font-swatch7-color;
         height: 2em;
         min-width: 2em;
         text-align: center;
         line-height: 2em;
+
+        &:hover {
+            box-shadow: inset 0px -40px 0px 0 @color-swatch2;
+        }
     }
 
 
