@@ -1,2 +1,2 @@
-# Zest
-Ecommerce Template
+# Timeline
+Blog Template
