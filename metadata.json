@@ -7,9 +7,9 @@
     "templateType":"ecommerce",
     "pageTypes": ["home","ecomproductslist"],
     "tags": {
-    "en": ["shopping", "ecommerce", "business", "store", "boutique", "minimal", "clean", "multipurpose", "simple", "contemporary", "flexible", "modern", "photography"],
-    "es": ["compras", "ecommerce", "negocios", "tienda", "boutique", "minimalista", "limpio", "multiuso", "simple", "contemporáneo", "flexible", "moderno", "fotográfico"],
-    "br": ["compras", "ecommerce", "negócio", "loja", "boutique", "minimalista", "limpo", "multiuso", "simples", "contemporâneo", "flexível", "moderno", "fotografia"]
+    "en": ["blog", "journal", "diary"],
+    "es": ["el blog", "revista", "diario"],
+    "br": ["blog", "jornal", "diário"]
     },
      "images":[
         "images/feature-bg.jpg",
