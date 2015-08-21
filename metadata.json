@@ -4,7 +4,7 @@
     "thumbnail": "timeline.png",
     "screenshot": "timeline.png",
     "screenshot":"timeline-screenshot.jpg",
-    "templateType":"ecommerce",
+    "templateType":"blog",
     "pageTypes": ["home","ecomproductslist"],
     "tags": {
     "en": ["blog", "journal", "diary"],
