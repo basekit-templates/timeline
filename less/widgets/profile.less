@@ -126,18 +126,19 @@
 		display: inline-block;
 		vertical-align: middle;
 		color: @font-swatch7-color;
-		background-color: fade(@font-swatch5-color, 10%);
+		background-color: transparent;
 		width: 30px;
 		height: 30px;
 		line-height: 30px;
 		font-size: 14px;
 		border-radius: 50px;
 		text-align: center;
+		box-shadow: inset 0px 0px 0px 2px @color-swatch3;
 	}
 
 	&:hover:before {
-		background-color: @color-swatch2;
-		color: @color-swatch1;
+		color: @color-swatch2;
+		box-shadow: inset 0px 0px 0px 2px @color-swatch2;
 	}
 }
 
@@ -163,19 +164,20 @@
 			margin-right: 0.5em;
 			display: inline-block;
 			vertical-align: middle;
-			color: @font-swatch7-color;
-			background-color: fade(@font-swatch5-color, 10%);
+			color: @color-swatch7;
+			background-color: transparent;
 			width: 30px;
 			height: 30px;
 			line-height: 30px;
 			font-size: 14px;
 			border-radius: 50px;
 			text-align: center;
+			box-shadow: inset 0px 0px 0px 2px @color-swatch3;
 		}
 
 		&:hover:before {
-			background-color: @color-swatch2;
-			color: @color-swatch1;
+			color: @color-swatch2;
+			box-shadow: inset 0px 0px 0px 2px @color-swatch2;
 		}
 	}
 }
