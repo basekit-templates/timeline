@@ -38,10 +38,15 @@
 		width: 36px;
 		height: 36px;
 		line-height: 36px;
-		background-color: @color-swatch7;
+		box-shadow: inset 0px -2px 0px 0 @color-swatch3;
+		background-color:  @color-swatch3;
 		color: @color-swatch1;
 		margin: 0 auto;
 		border-radius: 50px;
+		-webkit-transition: all 0.2s ease-in-out;
+	    -moz-transition: all 0.2s ease-in-out;
+	    -o-transition: all 0.2s ease-in-out;
+	    transition: all 0.2s ease-in-out;
 
 		@media @tablet {
 			font-size: 20px;
@@ -63,7 +68,7 @@
 	// Icon hover
 
 	&:hover:before {
-		background-color: @color-swatch2;
+		box-shadow: inset 0px -40px 0px 0 @color-swatch2;
 	}
 }
 
