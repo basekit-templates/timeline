@@ -484,11 +484,6 @@
 
 
 
-
-
-
-
-
 // ---------------------------------
 // Columns variations
 // ---------------------------------
@@ -515,8 +510,15 @@
         margin-bottom: 20px;
     }
 
-    .responsiveslideshow .responsiveslideshow__pagination-item  .button {
-        background-color: @color-swatch7;
+    .responsiveslideshow .responsiveslideshow__pagination-item {
+
+        .button {
+            background-color: @color-swatch7;
+        }
+
+        &.selected .button {
+            background-color: @color-swatch2;
+        }
     }
 
     .responsiveslideshow .caption {
