@@ -5,7 +5,7 @@
     "screenshot": "timeline.png",
     "screenshot":"timeline-screenshot.jpg",
     "templateType":"blog",
-    "pageTypes": ["home","ecomproductslist"],
+    "pageTypes": ["home"],
     "tags": {
     "en": ["blog", "journal", "diary"],
     "es": ["el blog", "revista", "diario"],
