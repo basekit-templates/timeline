@@ -118,6 +118,20 @@
         hyphens: auto;
         // Needed for Windows Mobile IE
         display: inline-block;
+
+        box-shadow: inset 0px -2px 0px 0px @color-swatch3;
+        display: inline-block;
+        line-height: 1.5;
+        -webkit-transition: all 0.2s ease-in-out;
+        -moz-transition: all 0.2s ease-in-out;
+        -o-transition: all 0.2s ease-in-out;
+        transition: all 0.2s ease-in-out;
+
+        &:hover {
+            text-decoration: none;
+            box-shadow: inset 0px -2px 0px 0px @color-swatch2, 0px 0px 0px 7px fade(@color-swatch2, 7%);
+            background-color: fade(@color-swatch2, 7%);
+        }
     }
 }
 
