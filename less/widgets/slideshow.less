@@ -500,20 +500,29 @@
 // ------------------------------
 
 
-@media @bp-global-columns {
-	.responsivecolumns {
 
-        .slide-pagination {
-            min-height: 40px;
-            top: auto;
-            bottom: -50px;
-            left: 0;
-            right: 0;
-            min-height: 0;
-        }
+.responsivecolumns {
 
-        .widget__responsiveslideshow {
-            margin-bottom: 20px;
-        }
-	}
+    .slide-pagination {
+        top: auto;
+        bottom: -36px;
+        left: 0;
+        right: 0;
+        min-height: 0;
+    }
+
+    .widget__responsiveslideshow {
+        margin-bottom: 20px;
+    }
+
+    .responsiveslideshow .responsiveslideshow__pagination-item  .button {
+        background-color: @color-swatch7;
+    }
+
+    .responsiveslideshow .caption {
+        top: auto;
+        width: 100%;
+    }
+
 }
+
