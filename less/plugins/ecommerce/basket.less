@@ -24,6 +24,10 @@
     color: @font-swatch5-color;
     text-indent: 100px;
 
+    @media @bp-global-small {
+        border-right: 1px solid fade(@color-swatch5, 10%);
+    }
+
 
     &:hover {
         background-color: transparent;
