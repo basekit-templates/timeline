@@ -63,7 +63,6 @@
         -webkit-tap-highlight-color:rgba(0,0,0,0);
         background-color: fade(@color-swatch5, 10%);
 
-
         &:after {
             font-family: 'FontAwesome', sans-serif;
             text-indent: 0;
@@ -79,6 +78,12 @@
             -o-transition: all 0.2s ease;
             transition: all 0.2s ease;
             color: @color-swatch2;
+
+            @media @bp-global-small {
+                height: 40px;
+                line-height: 40px;
+                font-size: 26px;
+            }
         }
 
         .no-touch &:hover {
@@ -137,10 +142,7 @@
         box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.05);
         opacity: 0;
 
-        @media @bp-global-small {
-            width: 70%;
-            left: 15%;
-        }
+
 
         .image {
             opacity: 0;

@@ -7,12 +7,29 @@
     float: left;
     width: 45%;
 
+
+    @media @bp-global-small {
+        float: none;
+        width: auto;
+        margin-bottom: 70px !important;
+    }
+
 }
 
 .widget[data-name="ecomproduct"] {
     float: right;
     clear: none;
     width: 51%;
+
+    .product--one-image & {
+        float: none;
+        width: auto;
+    }
+
+    @media @bp-global-small {
+        float: none;
+        width: auto;
+    }
 }
 
 // ------------------------------
@@ -72,15 +89,10 @@
     .product--one-image & {
         display: block;
         height: 0;
-        width: 60%;
-        margin: 0 auto;
-        padding-bottom: 60%;
+        width: 100%;
+        margin: 0 auto 30px;
+        padding-bottom: 100%;
         position: relative;
-
-        @media @bp-global-small {
-            width: 70%;
-            padding-bottom: 70%;
-        }
     }
 }
 
@@ -100,7 +112,7 @@
     left: 0;
     background-position:  center;
     background-size: contain;
-    box-shadow: 0px 11px 30px 0px rgba(213,213,213,0.18), inset 0px 0px 0px 1px rgba(0,0,0,0.05);
+    box-shadow: inset 0px 0px 0px 1px rgba(0,0,0,0.05);
     height: 100%;
     background-color: #fff;
 }
@@ -134,20 +146,20 @@
     // Product Title
 
     .product-title {
-        font-size: bkscale(@font-swatch1-font-size, 1);
-        line-height: bkscale(@font-swatch1-line-height, 1);
+        font-size: bkscale(@font-swatch2-font-size, 1);
+        line-height: bkscale(@font-swatch2-line-height, 1);
         font-weight: @font-swatch1-font-weight;
         position: relative;
         margin: 0;
 
         @media @bp-global-medium {
-            font-size: bkscale(@font-swatch1-font-size, 0.8);
-            line-height: bkscale(@font-swatch1-line-height, 0.8);
+            font-size: bkscale(@font-swatch2-font-size, 0.8);
+            line-height: bkscale(@font-swatch2-line-height, 0.8);
         }
 
         @media @bp-global-small {
-            font-size: bkscale(@font-swatch1-font-size, 0.7);
-            line-height: bkscale(@font-swatch1-line-height, 0.7);
+            font-size: bkscale(@font-swatch2-font-size, 0.7);
+            line-height: bkscale(@font-swatch2-line-height, 0.7);
         }
 
         &:after {
@@ -164,10 +176,7 @@
 
     .ecomproduct__product-price {
         color: @font-swatch5-color;
-        background-color:  darken(fade(@color-swatch1, 90%), 3%);
-        padding: 0.3em 14px;
-        float: left;
-        clear: both;
+
         font-size: bkscale(@font-swatch3-font-size, 1);
         line-height: bkscale(@font-swatch3-line-height, 1);
 
@@ -230,7 +239,7 @@
 
     .form .button {
         &.added {
-            background-color: @color-swatch1;
+            background-color: @color-swatch2;
             box-shadow: none;
             &:before {
                 content: '\f00c'
@@ -281,7 +290,7 @@
         .label {
             font-size: 13px;
             line-height: 1;
-            color: fade(@font-swatch5-color, 70%);
+            color: fade(@font-swatch5-color, 40%);
             display: block;
             padding-bottom: 0;
         }
@@ -322,6 +331,10 @@
         color: fade(@font-swatch5-color, 40%);
         display: block;
         padding-bottom: 0.5em;
+
+        @media @bp-global-small {
+            padding-bottom: 0;
+        }
     }
 
 
