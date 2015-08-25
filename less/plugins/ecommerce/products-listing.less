@@ -393,6 +393,9 @@
         }
         .product-item-article {
             margin-bottom: 4%;
+            @-moz-document url-prefix() {
+                margin-bottom: 20px;
+            }
         }
     }
 }
@@ -421,7 +424,6 @@
     background-color: transparent;
     box-shadow: inset 0px 0px 0px 1px #E9E9E7;
     width: 50%;
-    height: 0;
     padding-bottom: 50%;
     position: relative;
 
