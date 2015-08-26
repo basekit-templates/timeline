@@ -12,6 +12,7 @@
     "br": ["blog", "jornal", "diário"]
     },
      "images":[
+        "images/default.jpg",
         "images/logo.png"
     ],
     "colorSwatches":
