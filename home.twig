@@ -9,8 +9,14 @@
 
 	<!-- Zone Content -->
 	<div class="zone-content">
-        {{widget('feature', 'featurehome', {"header": "profile", "defaultBgImg": asset('images/feature-bg.png'), 'positionTopPercentage': '50%','showBtn': true, "buttonText":"Lorem Ipsum"})|raw}}
-
+        {{widget('feature', 'featurehome', {
+          'header': 'profile',
+          'strapline': 'profile',
+          'defaultBgImg': asset('images/feature-bg.png'),
+          'positionTopPercentage': '50',
+          'showBtn': true,
+          'buttonText': 'Lorem Ipsum'
+        })|raw}}
 		<!-- Main Widet Zone -->
    		{{zone('main')|raw}}
 	</div>
