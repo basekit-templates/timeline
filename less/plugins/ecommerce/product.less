@@ -69,7 +69,14 @@
 
 
 .product-images {
-
+    .product--one-image & {
+        float: left;
+        width: 44%;
+        @media @bp-global-small {
+            width: auto;
+            float: none;
+        }
+    }
 }
 
 
@@ -130,7 +137,14 @@
 
 
 .product-content {
-
+    .product--one-image & {
+        float: right;
+        width: 50%;
+        @media @bp-global-small {
+            width: auto;
+            float: none;
+        }
+    }
 }
 
 // Product Header
