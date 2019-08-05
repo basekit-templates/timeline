@@ -1,5 +1,6 @@
 {
     "name": "Timeline",
+    "versionTenCompatible": 1,
     "widgetVersion":2,
     "thumbnail": "timeline.png",
     "screenshot": "timeline.png",
