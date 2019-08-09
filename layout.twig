@@ -4,7 +4,7 @@
 
 	{% include "includes/head.twig" %}
 
-	<body class="{{ page.backgroundClass }} no-touch{% if app.mode != 'published' and app.mode != 'site-preview' %} edit-mode{% endif %}">
+	<body class="{{ page.backgroundClass }} no-touch{% if app.mode != 'published' and app.mode != 'site-preview' %} edit-mode{% endif %}" {{ isV10sSite ? 'id="migrated-site"' : '' }}>
 
 		{% include "includes/header.twig" %}
 
