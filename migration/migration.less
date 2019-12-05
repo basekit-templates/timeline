@@ -7,7 +7,7 @@
 
 
 
-  // Stylseheet overrides
+  // Stylesheet overrides
   // -----------------------------
 
 
@@ -27,6 +27,10 @@
     padding-bottom: 0;
     padding-left: 0;
     padding-right: 0;
+  }
+
+  .button--pagination {
+    margin-left: 20px;
   }
 
   .template-footer {
@@ -51,7 +55,7 @@
   .empty-zone,
   #page-zones__main:empty,
   #page-zones__main > .widget:not([data-name="row"]),
-  [data-name="row"]:not(.row--width-no-padding) .row__container {
+  .row:not(.row--width-no-padding) .row__container {
     margin-left: auto;
     margin-right: auto;
     max-width: @container-width;
