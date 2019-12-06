@@ -29,6 +29,39 @@
     padding-right: 0;
   }
 
+  .row {
+
+    .content p, 
+    .content, 
+    .post-body p, 
+    .post-body, 
+    .product-body p, 
+    .product-body, 
+    h1, 
+    h2, 
+    h3, 
+    h4, 
+    h5 {
+      margin-bottom: 0;
+    }
+  }
+
+  .row--layout-pricing-1a,
+  .row--layout-text-14a {
+    li:before {
+      display: none;
+    }
+  }
+
+
+.emailaddress__email,
+.phone-number-link,
+.companyaddress__vcard p {
+  &:after {
+    display: none;
+  }
+}
+
   .button--pagination {
     margin-left: 20px;
   }
