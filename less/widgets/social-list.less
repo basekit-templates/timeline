@@ -23,6 +23,10 @@
 
 
 .social-link {
+	background-color: @color-swatch3;
+	border-radius: 50px;
+	box-shadow: inset 0px -2px 0px 0 @color-swatch3;
+	color: @color-swatch1;
 	display: block;
 	text-align: center;
 
@@ -38,11 +42,7 @@
 		width: 36px;
 		height: 36px;
 		line-height: 36px;
-		box-shadow: inset 0px -2px 0px 0 @color-swatch3;
-		background-color:  @color-swatch3;
-		color: @color-swatch1;
 		margin: 0 auto;
-		border-radius: 50px;
 		-webkit-transition: all 0.2s ease-in-out;
 	    -moz-transition: all 0.2s ease-in-out;
 	    -o-transition: all 0.2s ease-in-out;
@@ -67,7 +67,7 @@
 
 	// Icon hover
 
-	&:hover:before {
+	&:hover {
 		box-shadow: inset 0px -40px 0px 0 @color-swatch2;
 	}
 }
